@@ -3,3 +3,4 @@
 cd programs/
 
 ./antibody.sh
+./shelby.sh

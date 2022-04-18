@@ -19,3 +19,5 @@ install htop
 install nmap
 install tmux
 install vim
+install zsh
+install neofetch
