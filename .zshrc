@@ -85,6 +85,7 @@ alias kns='kubens'
 #alias ph='HTTPS_PROXY=localhost:8888 helm'
 alias dry='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock moncho/dry'
 
+eval "$(shelby init zsh)"
 
 # Run antibody (https://getantibody.github.io/)
 source <(antibody init)
