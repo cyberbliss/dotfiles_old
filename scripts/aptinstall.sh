@@ -21,3 +21,4 @@ install tmux
 install vim
 install zsh
 install neofetch
+install xclip
