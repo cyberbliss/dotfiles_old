@@ -1,4 +1,5 @@
 #!/bin/bash
+# Script from here: https://github.com/canha/golang-tools-install-script
 # shellcheck disable=SC2016
 set -e
 
