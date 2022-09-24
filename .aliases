@@ -1,0 +1,41 @@
+# hsi for searching through your history
+alias hsi='hs -i'
+
+alias diff='colordiff'
+
+# Use dots to navigate up dirs
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+
+# tmux aliases
+# Attaches tmux to the last session; creates a new session if none exists.
+alias t='tmux attach || tmux new-session'
+
+# Attaches tmux to a session (example: ta portal)
+alias ta='tmux attach -t'
+
+# Creates a new session
+alias tn='tmux new-session'
+
+# Lists all ongoing sessions
+alias tl='tmux list-sessions'
+
+# Various Kubernetes functions and alias
+alias kctx='kubectx'
+alias kc='kubectl'
+#alias pkc="HTTPS_PROXY=localhost:8888 kubectl"
+alias kns='kubens'
+#alias pkns='HTTPS_PROXY=localhost:8888 kubens'
+#alias ph='HTTPS_PROXY=localhost:8888 helm'
+alias dry='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock moncho/dry'
+
+# gcloud
+mkdir -p $HOME/.config/gcloud
+alias gcloud="docker run --rm -ti -v $HOME/.config/gcloud:/root/.config/gcloud google/cloud-sdk:400.0.0-slim gcloud"
+
+# Portainer
+mkdir -p $HOME/.config/portainer
+alias portainer="docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/.config/portainer:/data portainer/portainer-ce:2.14.2-alpine"

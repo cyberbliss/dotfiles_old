@@ -47,45 +47,14 @@ function hs
     history 1 | grep $*
 }
 
-# hsi for searching through your history
-alias hsi='hs -i'
-
-alias diff='colordiff'
-
-# Use dots to navigate up dirs
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ......="cd ../../../../.."
-
-# tmux aliases
-# Attaches tmux to the last session; creates a new session if none exists.
-alias t='tmux attach || tmux new-session'
-
-# Attaches tmux to a session (example: ta portal)
-alias ta='tmux attach -t'
-
-# Creates a new session
-alias tn='tmux new-session'
-
-# Lists all ongoing sessions
-alias tl='tmux list-sessions'
 
 # Python stuff
 # Stop Python from creating cached files
 export PYTHONDONTWRITEBYTECODE=True
 
-# Various Kubernetes functions and alias
-alias kctx='kubectx'
-alias kc='kubectl'
-#alias pkc="HTTPS_PROXY=localhost:8888 kubectl"
-alias kns='kubens'
-#alias pkns='HTTPS_PROXY=localhost:8888 kubens'
-#alias ph='HTTPS_PROXY=localhost:8888 helm'
-alias dry='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock moncho/dry'
+source ~/.aliases
 
-eval "$(shelby init zsh)"
+eval "$(oh-my-posh init zsh --config ~/.config/stevejudd-full.omp.json)"
 
 # Run antibody (https://getantibody.github.io/)
 source <(antibody init)

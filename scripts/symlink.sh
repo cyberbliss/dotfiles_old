@@ -33,3 +33,4 @@ linkDotfile .zshrc
 linkDotfile .zsh_plugins.txt
 linkDotfile .dir_colours
 linkDotfile .tmux.conf
+linkDotfile .aliases
